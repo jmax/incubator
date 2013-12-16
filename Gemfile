@@ -14,6 +14,7 @@ gem 'turbolinks'
 gem 'jbuilder',        '~> 1.2'
 gem 'decent_exposure', '2.3.0'
 gem 'dynamic_form'
+gem 'inherited_resources', '1.4.1'
 
 group :development, :test do
   gem 'sqlite3'

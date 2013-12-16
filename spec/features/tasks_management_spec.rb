@@ -34,7 +34,7 @@ feature "Tasks Management" do
 
     expect(Task.where(title: "Foo")).to exist
     expect(current_path).to eql("/tasks")
-    expect(page).to have_content("Task has been successfully created.")
+    expect(page).to have_content("Task was successfully created.")
   end
 
   scenario "Creating a new task with invalid data" do
@@ -57,7 +57,7 @@ feature "Tasks Management" do
     }.to change{task.reload.title}.from("Some title").to("Foo")
 
     expect(current_path).to eql("/tasks/#{task.id}")
-    expect(page).to have_content("Task has been successfully updated.")
+    expect(page).to have_content("ask was successfully updated.")
   end
 
   scenario "Updating an existing task with invalid data" do
@@ -77,6 +77,6 @@ feature "Tasks Management" do
 
     expect(Task.all).to be_empty
     expect(current_path).to eql("/tasks")
-    expect(page).to have_content("Task has been successfully removed.")
+    expect(page).to have_content("Task was successfully destroyed.")
   end
 end
