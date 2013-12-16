@@ -1,0 +1,9 @@
+<li><%= link_to task.title, task %></li>
+<li><%= task.description %></li>
+<li>
+  <%= link_to "Edit", [:edit, task] %>
+</li>
+<li>
+  <%= link_to "Delete", task, method: :delete,
+        data: { confirm: "Are you sure?" } %>
+</li>
